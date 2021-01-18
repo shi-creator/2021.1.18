@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <table class="table">
+        <tr>
+            <td>标题</td>
+            <td>发布状态</td>
+            <td>评论数</td>
+            <td>阅读数</td>
+            <td>操作</td>
+            <td>操作</td>
+        </tr>
+        {foreach $data as $key=>$val}
+        <tr>
+            <td>{$val.title}</td>
+            <td>已发布</td>
+            <td>0</td>
+            <td>0</td>
+            <td>编辑</td>
+            <td><a href="{:url('delete')}?id={$val.id}">删除</a></td>
+        </tr>
+        {/foreach}
+    </table>
+</div>
+
+</body>
+</html>
